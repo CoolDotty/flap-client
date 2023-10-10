@@ -148,6 +148,11 @@ module.exports = function generateConfig(options) {
       new SimpleProgressWebpackPlugin({
         format: 'minimal',
       }),
+      new webpack.DefinePlugin({
+        'process.env': {
+         'PUBLIC_PATH': JSON.stringify(publicPath)
+        }
+       }),
     ],
   };
 

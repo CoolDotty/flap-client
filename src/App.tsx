@@ -19,7 +19,10 @@ const App = () => {
   }, []);
 
   return (
-    <Router>
+    <Router 
+      // See: plugins in webpack.config.js
+      basename={process.env.PUBLIC_PATH}
+    >
       <div className="app">
         <ul className="navigator">
           <li>
