@@ -1,5 +1,7 @@
 # flap-client
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/KarlTheCool/flap-client)
+
 Flap-client is a React application designed for technical assessments.
 
 The packages required to solve this assessment are already in project, so adding additional dependences via `yarn`/`npm` should not be necessary
