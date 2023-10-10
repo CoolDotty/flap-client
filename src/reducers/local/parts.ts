@@ -1,5 +1,6 @@
 import { AnyAction } from 'redux';
 import { DECREMENT_PART, INCREMENT_PART } from '../../actions/parts';
+import _ from 'lodash';
 
 // import { v4 as uuid } from 'uuid';
 
@@ -22,7 +23,8 @@ const initialState = [
   },
 ];
 
-const partsReducer = (state = initialState, action: AnyAction) => {
+const partsReducer = (prevState = initialState, action: AnyAction) => {
+  const state = _.cloneDeep(prevState)
   switch (action.type) {
     case INCREMENT_PART: {
       const idx = state.findIndex(part => part.name === action.partName);
