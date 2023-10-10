@@ -20,7 +20,7 @@ const Home = () => {
       <hr />
       <ul className="partsList">
         {parts.map(part => (
-          <li 
+          <li
             key={part.id} 
             className={selectedPart === part.id ? 'selected' : null}
             onClick={() => setSelectedPart(part.id)}
@@ -28,6 +28,7 @@ const Home = () => {
             {part.name} {part.amount}
             <button
               onClick={e => {
+                e.stopPropagation();
                 dispatch(incrementPart(part.id));
               }}
             >
@@ -35,6 +36,7 @@ const Home = () => {
             </button>
             <button
               onClick={e => {
+                e.stopPropagation();
                 dispatch(decrementPart(part.id));
               }}
             >
